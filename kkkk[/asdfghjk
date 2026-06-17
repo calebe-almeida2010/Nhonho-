@@ -6,7 +6,9 @@ CREATE TABLE IF NOT EXISTS cliente (
   cpf TEXT NOT NULL UNIQUE
   );
   
-  INSERT INTO cliente (nome,telefone,cpf) VALUES
-('paodequeijo','34 3463-3643','pix','2212.222.2221-22')
+  INSERT INTO cliente (nome,telefone,formadepagamento,cpf) VALUES
+('Matt','11 9003-8000','cartao','681.111.308-12'),
+('Octavio','54 9090-1883','dinheiro','098.564.212-00'),
+('Luiz','67 9254-7652','cucard','336.998.011-99');
 	
   SELECT * FROM cliente;
