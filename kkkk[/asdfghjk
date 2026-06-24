@@ -7,8 +7,21 @@ CREATE TABLE IF NOT EXISTS cliente (
   );
   
   INSERT INTO cliente (nome,telefone,formadepagamento,cpf) VALUES
-('Matt','11 9003-8000','cartao','681.111.308-12'),
-('Octavio','54 9090-1883','dinheiro','098.564.212-00'),
-('Luiz','67 9254-7652','cucard','336.998.011-99');
-	
+	('Paulo','45 9950-3321','pix','1352435439'),
+    ('Ryan','45 7373-6744','dinheiro','54682931609'),
+    ('Juliana','45 7890-3421','cartao','3247805794');
   SELECT * FROM cliente;
+  
+    CREATE TABLE IF NOT EXISTS produto (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+  	nome TEXT NOT NULL,
+  	preço TEXT NOT NULL,
+    conteudo TEXT NOT NULL UNIQUE
+    );
+    
+    INSERT INTO produto (nome,preço,conteudo) VALUES
+    ('Caneca','R$ 40,00 à R$ R$ 90,00','Personalizavl'),
+    ('Fantasias','R$ 80,00 à R$ 800,00','Sua esolha'),
+    ('Mangas','R$ 33,90 e R$ 44,90','Anime'),
+    ('Action Figures','R$ 100 e  R$ 1.500','Anime e desenho');
+    SELECT * FROM produto;
