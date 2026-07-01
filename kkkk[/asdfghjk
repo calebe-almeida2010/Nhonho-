@@ -3,15 +3,15 @@ CREATE TABLE IF NOT EXISTS cliente (
        nome TEXT NOT NULL,
        telefone TEXT NOT NULL,
        cpf TEXT NOT NULL,
-  	   formadepagamento TEXT NOT NULL,
-       data TEXT NOT NULL UNIQUE
+  	   endereco TEXT NOT NULL,
+       cep TEXT NOT NULL UNIQUE
 );
-      INSERT INTO cliente (nome,telefone,cpf,formadepagamento,data) VALUES
-      ('Paulo','45 9950-3321','1352435439','pix','02/08/2010'),
-      ('Ryan','45 7373-6744','54682931609','dinheiro','23/11/2010'),
-      ('Juliana','45 7890-3421','3247805794','cartao','09/08/2009');
+      INSERT INTO cliente (nome,telefone,cpf,endereco,cep) VALUES
+      ('Paulo','45 9950-3321','876.845.128-87','Bar do Mendigo - Casa - 231','567178-645'),
+      ('Ryan','45 7373-6744','897.977.648-52','Puxeiro - Apto - 32','938986-984'),
+      ('Juliana','45 7890-3421','994.634.266-63','Cuíaba - Casa - 053','596551-906');
 
-  SELECT * FROM cliente;
+  SELECT * FROM cliente; 
   
 CREATE TABLE IF NOT EXISTS produtos (
        id INTEGER PRIMARY KEY AUTOINCREMENT,
@@ -21,11 +21,13 @@ CREATE TABLE IF NOT EXISTS produtos (
 );
       INSERT INTO produtos (nome,preco,conteudo) VALUES
       ('Caneca','R$ 40,00 à R$ R$ 90,00','Personalizavel'),
-    ('Fantasias','R$ 80,00 à R$ 800,00','Sua esolha'),
-    ('Mangas','R$ 33,90 e R$ 44,90','Anime'),
-    ('Action Figures','R$ 100 e  R$ 1.500','Anime e desenho');
+    ('Fantasias','R$ 80,00 à R$ 800,00','Sua escolha'),
+    ('Mangas','R$ 33,90 à R$ 44,90','Anime'),
+    ('Action Figures','R$ 100 à  R$ 1.500','Anime e desenho'),
+    ('Quadros','R$ 40,00 à R$ 130,00','Sua escolha');
  
   SELECT * FROM produtos;
+
   
 CREATE TABLE IF NOT EXISTS pedido (
        cliente TEXT NOT NULL,
