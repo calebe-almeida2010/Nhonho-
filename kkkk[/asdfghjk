@@ -94,3 +94,20 @@ FROM itens_pedido ip
 INNER JOIN produtos prod ON ip.produto_id = prod.id
 GROUP BY prod.id
 ORDER BY total_unidades_vendidas DESC;
+
+
+CREATE TABLE IF NOT EXISTS produtos (
+       id INTEGER PRIMARY KEY AUTOINCREMENT,
+       nome TEXT NOT NULL,
+       preco TEXT NOT NULL,
+       categoria TEXT NOT NULL
+);
+     INSERT INTO produtos (nome,preco,categoria) VALUES
+    ('Caneca','R$ 40,00','Personalizavel'),
+    ('Action Figures','R$ 150','Anime e desenho'),
+    ('Quadros','R$ 130,00','Sua escolha'),
+    ('Mangas','R$ 44,90','Anime'),
+    ('Light Novels','R$ 69,90','Animes'),
+    ('cosplays','R$ 80,00','Sua escolha');
+ 
+  SELECT * FROM produtos;
